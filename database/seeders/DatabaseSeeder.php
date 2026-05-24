@@ -27,32 +27,32 @@ class DatabaseSeeder extends Seeder
 
         // Seed Categories
         $electronics = \App\Models\Category::create([
-            'name' => 'Electronics',
-            'slug' => 'electronics',
-            'description' => 'Gadgets, devices, and accessories to keep you connected.',
+            'name' => 'Elektronik',
+            'slug' => 'elektronik',
+            'description' => 'Gadget, perangkat pintar, dan aksesoris teknologi terbaru.',
             'is_active' => true,
         ]);
 
         $apparel = \App\Models\Category::create([
-            'name' => 'Apparel & Fashion',
-            'slug' => 'apparel-fashion',
-            'description' => 'Trendy clothing, shoes, and modern lifestyle wear.',
+            'name' => 'Pakaian & Mode',
+            'slug' => 'pakaian-mode',
+            'description' => 'Pakaian trendi, sepatu, dan gaya hidup modern.',
             'is_active' => true,
         ]);
 
         $home = \App\Models\Category::create([
-            'name' => 'Home & Kitchen',
-            'slug' => 'home-kitchen',
-            'description' => 'Beautiful decor, essential cookware, and home accents.',
+            'name' => 'Rumah & Dapur',
+            'slug' => 'rumah-dapur',
+            'description' => 'Dekorasi indah, peralatan dapur esensial, dan pernak-pernik rumah.',
             'is_active' => true,
         ]);
 
         // Seed Products
         \App\Models\Product::create([
             'category_id' => $electronics->id,
-            'name' => 'Wireless Noise-Cancelling Headphones',
-            'slug' => 'wireless-noise-cancelling-headphones',
-            'description' => 'Immerse yourself in pure sound with our active noise-cancelling over-ear headphones. Features 40-hour battery life and fast charging.',
+            'name' => 'Headphone Nirkabel Noise-Cancelling',
+            'slug' => 'headphone-nirkabel-noise-cancelling',
+            'description' => 'Nikmati suara murni dengan headphone over-ear active noise-cancelling kami. Dilengkapi daya tahan baterai 40 jam dan pengisian daya cepat.',
             'price' => 249.99,
             'stock' => 15,
             'is_active' => true,
@@ -60,9 +60,9 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Product::create([
             'category_id' => $electronics->id,
-            'name' => 'Minimalist Smart Watch',
-            'slug' => 'minimalist-smart-watch',
-            'description' => 'A sleek, premium smartwatch tracking your fitness, sleep, and notifications with a stunning 7-day battery life.',
+            'name' => 'Jam Tangan Pintar Minimalis',
+            'slug' => 'jam-tangan-pintar-minimalis',
+            'description' => 'Jam tangan pintar premium dengan desain ramping untuk melacak kebugaran, tidur, dan notifikasi Anda. Dilengkapi baterai tahan 7 hari.',
             'price' => 189.50,
             'stock' => 8,
             'is_active' => true,
@@ -70,9 +70,9 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Product::create([
             'category_id' => $apparel->id,
-            'name' => 'Classic Cotton Trench Coat',
-            'slug' => 'classic-cotton-trench-coat',
-            'description' => 'Timeless water-resistant trench coat crafted from organic Egyptian cotton. Perfect for layering in transitional weather.',
+            'name' => 'Mantel Katun Klasik',
+            'slug' => 'mantel-katun-klasik',
+            'description' => 'Mantel trench tahan air klasik yang dibuat dari katun organik pilihan. Sangat cocok untuk gaya berpakaian berlapis Anda.',
             'price' => 145.00,
             'stock' => 22,
             'is_active' => true,
@@ -80,9 +80,9 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Product::create([
             'category_id' => $apparel->id,
-            'name' => 'Premium Knit Sweater',
-            'slug' => 'premium-knit-sweater',
-            'description' => 'Ultra-soft merino wool knit sweater designed for cozy warmth and long-lasting durability.',
+            'name' => 'Sweater Rajut Premium',
+            'slug' => 'sweater-rajut-premium',
+            'description' => 'Sweater rajut dari bahan wol premium yang sangat lembut, dirancang untuk kehangatan maksimal dan daya tahan lama.',
             'price' => 85.00,
             'stock' => 30,
             'is_active' => true,
@@ -90,9 +90,9 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Product::create([
             'category_id' => $home->id,
-            'name' => 'Ceramic Matte Coffee Mug Set',
-            'slug' => 'ceramic-matte-coffee-mug-set',
-            'description' => 'Set of 4 handcrafted ceramic mugs in natural earth tones, finished with a smooth matte glaze.',
+            'name' => 'Set Cangkir Kopi Keramik Matte',
+            'slug' => 'set-cangkir-kopi-keramik-matte',
+            'description' => 'Satu set berisi 4 cangkir keramik buatan tangan dengan nuansa warna alam yang hangat, dilapisi dengan lapisan matte yang halus.',
             'price' => 34.00,
             'stock' => 50,
             'is_active' => true,
@@ -100,9 +100,9 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Product::create([
             'category_id' => $home->id,
-            'name' => 'Minimalist Table Lamp',
-            'slug' => 'minimalist-table-lamp',
-            'description' => 'Warm glow table lamp with solid oak base and frosted glass shade. Dimmable control for the perfect ambient lighting.',
+            'name' => 'Lampu Meja Minimalis',
+            'slug' => 'lampu-meja-minimalis',
+            'description' => 'Lampu meja dengan cahaya hangat yang nyaman, menggunakan kaki kayu ek kokoh dan kap kaca buram. Dilengkapi kontrol peredup cahaya.',
             'price' => 59.99,
             'stock' => 12,
             'is_active' => true,

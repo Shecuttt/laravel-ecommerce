@@ -9,9 +9,16 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\Auth\SocialiteController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
+    Route::get('auth/google/redirect', [SocialiteController::class, 'redirectToGoogle'])
+        ->name('auth.google.redirect');
+    
+    Route::get('auth/google/callback', [SocialiteController::class, 'handleGoogleCallback'])
+        ->name('auth.google.callback');
+
     Route::get('register', [RegisteredUserController::class, 'create'])
         ->name('register');
 
